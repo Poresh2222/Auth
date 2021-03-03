@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainAuthComponent implements OnInit {
 
+  isLogged = -1;
+
   constructor() { }
 
   ngOnInit(): void {

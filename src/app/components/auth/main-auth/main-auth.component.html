@@ -1,1 +1,8 @@
-<p>main-auth works!</p>
+<ng-container >
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+        <app-signup-button *ngIf="isLogged===-1"></app-signup-button>
+        <app-login-button *ngIf="isLogged===-1"></app-login-button>
+        <app-username *ngIf="isLogged===1"></app-username>
+    </div>
+</ng-container>
+
