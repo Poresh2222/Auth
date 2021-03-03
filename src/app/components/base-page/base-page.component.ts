@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { takeUntil } from 'rxjs/operators';
 
-import { SMALL_DIALOG_CONFIG } from '../dialog/dialog.config';
+//import { SMALL_DIALOG_CONFIG } from '../dialog/dialog.config';
 
 import { BaseComponent } from '../base/base.component';
 import { ErrorDialogComponent } from '../dialog/error-dialog/error-dialog.component';
@@ -56,7 +56,7 @@ export class BasePageComponentWithDialogs extends BasePageComponent {
 
   openErrorDialog(msg?:string): void {
     const dialogRef = this.errorDialog.open(ErrorDialogComponent, {
-      ...SMALL_DIALOG_CONFIG,
+      //...SMALL_DIALOG_CONFIG,
       panelClass: "transparent",
       data: {msg:msg}
     });
@@ -64,7 +64,7 @@ export class BasePageComponentWithDialogs extends BasePageComponent {
 
   openSuccessDialog(msg?:string): void {
     const dialogRef = this.errorDialog.open(SuccessDialogComponent, {
-      ...SMALL_DIALOG_CONFIG,
+      //...SMALL_DIALOG_CONFIG,
       panelClass: "transparent",
       data: {msg:msg}
     });

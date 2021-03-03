@@ -20,6 +20,10 @@ import { SignupButtonComponent } from './components/auth/signup/signup-button/si
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StartPageComponent } from './components/start-page/start-page.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { ErrorDialogComponent } from './components/dialog/error-dialog/error-dialog.component';
+import { SuccessDialogComponent } from './components/dialog/success-dialog/success-dialog.component';
+import { CloseDialogButtonComponent } from './components/dialog/close-dialog-button/close-dialog-button.component';
+import { LogoutComponent } from './components/auth/logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { HomePageComponent } from './components/home-page/home-page.component';
     SignupComponent,
     SignupButtonComponent,
     StartPageComponent,
-    HomePageComponent
+    HomePageComponent,
+    ErrorDialogComponent,
+    SuccessDialogComponent,
+    CloseDialogButtonComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,

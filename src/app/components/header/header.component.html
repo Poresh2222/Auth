@@ -1,4 +1,11 @@
-<div class="header_a" fxLayout="row" fxLayoutAlign="space-between center">
+<div class="header_desktop" *ngIf="diviceType===true" fxLayout="row" fxLayoutAlign="space-between center">
     <div><h1>AUTH</h1></div>
+
+    <app-main-auth></app-main-auth>
+</div>
+
+<div class="header_mobile" *ngIf="diviceType===false" fxLayout="row" fxLayoutAlign="space-between center">
+    <div><h1>A</h1></div>
+
     <app-main-auth></app-main-auth>
 </div>
