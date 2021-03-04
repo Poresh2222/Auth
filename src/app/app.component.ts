@@ -1,5 +1,6 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { Router } from '@angular/router';
 
 import { DetectDeviceService } from './services/utils/detect-device.service';
 
@@ -15,10 +16,12 @@ export class AppComponent implements OnInit {
   public screenHeight: any;
 
   constructor(
+    public router: Router,
     private deviceService: DetectDeviceService
   ) {}
 
   ngOnInit() {
+    this.router.navigate(['startpage'])
     console.log(this.deviceService.isDesktop()),
     console.log(this.screenWidth = window.innerWidth),
     console.log(this.screenHeight = window.innerHeight)

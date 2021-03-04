@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 import { SharedMaterialModule } from './modules/shared-material.module';
 
@@ -24,6 +25,7 @@ import { ErrorDialogComponent } from './components/dialog/error-dialog/error-dia
 import { SuccessDialogComponent } from './components/dialog/success-dialog/success-dialog.component';
 import { CloseDialogButtonComponent } from './components/dialog/close-dialog-button/close-dialog-button.component';
 import { LogoutComponent } from './components/auth/logout/logout.component';
+import { LostPasswordComponent } from './components/auth/lost-password/lost-password.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,8 @@ import { LogoutComponent } from './components/auth/logout/logout.component';
     ErrorDialogComponent,
     SuccessDialogComponent,
     CloseDialogButtonComponent,
-    LogoutComponent
+    LogoutComponent,
+    LostPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +55,8 @@ import { LogoutComponent } from './components/auth/logout/logout.component';
     FlexLayoutModule,
     SharedMaterialModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

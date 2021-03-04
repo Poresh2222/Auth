@@ -1,21 +1,11 @@
-<div class="full-body" >
+<div class="body-page" fxLayout="column" fxLayoutAlign="space-between center">
 
-  <div class="header" >
+  <app-header></app-header>
 
-    <app-header></app-header>
-
-  </div>
-
-  <div class="body">
-
+  <div class="body-content">
     <router-outlet></router-outlet>
+
+  </div>
   
-  </div>
-
-  <div class="footer">
-
-    <app-footer></app-footer>
-
-  </div>
-
+  <app-footer></app-footer>
 </div>

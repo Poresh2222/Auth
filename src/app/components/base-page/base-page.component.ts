@@ -70,4 +70,6 @@ export class BasePageComponentWithDialogs extends BasePageComponent {
     });
   }
 
+  confirm(data:any){}
+
 }
