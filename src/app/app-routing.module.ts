@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginDialogRouteComponent } from './components/auth/login/login-dialog/login-dialog.component';
 import { LostPasswordComponent } from './components/auth/lost-password/lost-password.component';
-import { SignupComponent } from './components/auth/signup/signup.component';
+import { SignupDialogRouteComponent } from './components/auth/signup/signup-dialog/signup-dialog.component';
 
 import { StartPageComponent } from './components/start-page/start-page.component';
 
@@ -13,7 +13,7 @@ const loginRoute = {
 
 const signupRoute = {
   path: 'signup',
-  component: SignupComponent
+  component: SignupDialogRouteComponent
 }
 
 const routes: Routes = [

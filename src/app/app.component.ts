@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   @ViewChild('sidenav') sidenav: MatSidenav;
   public screenWidth: any;
   public screenHeight: any;
+  public type: boolean;
 
   constructor(
     public router: Router,
@@ -27,8 +28,11 @@ export class AppComponent implements OnInit {
     console.log(this.screenHeight = window.innerHeight)
   }
 
-  deviceType() {
-    this.deviceService.isDesktop()
+  deviceType(): boolean {
+    if (this.deviceService.isDesktop() == true) {
+      return true
+    }
+    else false
   }
 
 }

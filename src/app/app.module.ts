@@ -26,6 +26,12 @@ import { SuccessDialogComponent } from './components/dialog/success-dialog/succe
 import { CloseDialogButtonComponent } from './components/dialog/close-dialog-button/close-dialog-button.component';
 import { LogoutComponent } from './components/auth/logout/logout.component';
 import { LostPasswordComponent } from './components/auth/lost-password/lost-password.component';
+import { SignupDialogComponent } from './components/auth/signup/signup-dialog/signup-dialog.component';
+import { SignupFormComponent } from './components/auth/signup/signup-form/signup-form.component';
+import { SignupStepOneComponent } from './components/auth/signup/signup-step-one/signup-step-one.component';
+import { SignupStepTwoComponent } from './components/auth/signup/signup-step-two/signup-step-two.component';
+import { SignupStepThreeComponent } from './components/auth/signup/signup-step-three/signup-step-three.component';
+import { StepperComponent } from './components/auth/signup/stepper/stepper.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +53,13 @@ import { LostPasswordComponent } from './components/auth/lost-password/lost-pass
     SuccessDialogComponent,
     CloseDialogButtonComponent,
     LogoutComponent,
-    LostPasswordComponent
+    LostPasswordComponent,
+    SignupDialogComponent,
+    SignupFormComponent,
+    SignupStepOneComponent,
+    SignupStepTwoComponent,
+    SignupStepThreeComponent,
+    StepperComponent
   ],
   imports: [
     BrowserModule,
