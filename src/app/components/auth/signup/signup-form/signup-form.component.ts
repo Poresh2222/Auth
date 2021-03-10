@@ -45,6 +45,26 @@ export class SignupFormComponent extends BasePageComponent implements AfterViewI
     //cmsDataService
   }
 
+  completeStepOne(result:boolean){
+    this.isCompleted1 = result;
+    this.selectedIndex = 1; 
+    // this.stepper.selected.completed = result;
+    if (this.isCompleted1) {
+      // this.stepper.next();
+    }
+  }
+
+  completeStepTwo(result:boolean){
+    this.isCompleted2 = result;
+    this.selectedIndex = 2; 
+    // this.stepper.selected.completed = result;
+    // if (this.isCompleted2) this.stepper.next();
+  }
+
+  completeStepThree(url:string){
+    this.closeDialog(url);
+  }
+
   ngAfterViewInit() {
 
   }

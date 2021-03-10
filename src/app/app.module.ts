@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { LottieModule } from 'ngx-lottie';
 
 import { SharedMaterialModule } from './modules/shared-material.module';
 
@@ -16,7 +17,6 @@ import { LoginDialogComponent } from './components/auth/login/login-dialog/login
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { UsernameComponent } from './components/auth/username/username.component';
-import { SignupComponent } from './components/auth/signup/signup.component';
 import { SignupButtonComponent } from './components/auth/signup/signup-button/signup-button.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StartPageComponent } from './components/start-page/start-page.component';
@@ -45,7 +45,6 @@ import { StepperComponent } from './components/auth/signup/stepper/stepper.compo
     HeaderComponent,
     FooterComponent,
     UsernameComponent,
-    SignupComponent,
     SignupButtonComponent,
     StartPageComponent,
     HomePageComponent,
@@ -69,6 +68,7 @@ import { StepperComponent } from './components/auth/signup/stepper/stepper.compo
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    LottieModule
   ],
   providers: [],
   bootstrap: [AppComponent]

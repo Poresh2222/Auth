@@ -20,7 +20,7 @@
                 <app-signup-step-two (isCompleted)="completeStepTwo($event)" [registrationFields]="fieldResponse2" ></app-signup-step-two>
             </mat-step>
         </mat-horizontal-stepper> -->
-        <app-stepper [stepNumber]="selectedIndex"></app-stepper>
+        <!-- <app-stepper [stepNumber]="selectedIndex"></app-stepper> -->
 
         <app-signup-step-one *ngIf="!isCompleted1" (isCompleted)="completeStepOne($event)" [registrationFields]="fieldResponse1" [data]="this.cmsData?.signupCmsInfo">
         </app-signup-step-one>

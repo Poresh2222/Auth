@@ -1,6 +1,11 @@
 import { Injectable } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
 
+export enum DEVICE_TYPE {
+  MOBILE,
+  DESKTOP
+}
+
 @Injectable({
   providedIn: 'root'
 })
