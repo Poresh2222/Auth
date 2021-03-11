@@ -38,6 +38,7 @@ export class SignupDialogRouteComponent implements OnInit {
       ...this.dialogSize,
       panelClass: "signup",
       disableClose: true,
+      backdropClass: "fullPrimaryBackdropBackground",
       data: {  }
     });
 

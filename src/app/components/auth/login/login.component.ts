@@ -46,6 +46,7 @@ export class LoginComponent extends BasePageComponent {
     this.formSubmited = true;
     console.log(loginForm);
     console.log(this.formSubmited)
+    
 
   }
 
@@ -54,7 +55,7 @@ export class LoginComponent extends BasePageComponent {
   }
 
   lostPassword() {
-    this.closeDialog('/lost-password');
+    this.closeDialog('/'+'lostpassword');
   }
 
 }

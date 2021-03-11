@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "~11.0.3",
     "@angular/router": "~11.0.3",
     "lottie-web": "^5.7.6",
+    "ngx-cookie-service": "^11.0.2",
     "ngx-device-detector": "^2.0.6",
     "ngx-lottie": "^6.4.0",
     "rxjs": "~6.6.0",

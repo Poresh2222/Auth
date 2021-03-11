@@ -67,6 +67,7 @@ export class SignupStepTwoComponent extends BasePageComponentWithDialogs {
   }
 
   onSubmit(registerForm2) {
+    if (this.formSubmited || !this.registerForm2.valid) return;
     this.isCompleted.next(true);
   }
 
