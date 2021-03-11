@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit, PLATFORM_ID, LOCALE_ID, Inject } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
 
   constructor(
     public router: Router,
-    private deviceService: DetectDeviceService
+    private deviceService: DetectDeviceService,
   ) {}
 
   ngOnInit() {

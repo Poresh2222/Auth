@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { LottieModule } from 'ngx-lottie';
+import { HttpClientModule } from '@angular/common/http';
 
 import { SharedMaterialModule } from './modules/shared-material.module';
 
@@ -68,9 +69,15 @@ import { StepperComponent } from './components/auth/signup/stepper/stepper.compo
     BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
-    LottieModule
+    LottieModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(
+    
+  ) {}
+ }

@@ -13,8 +13,16 @@ export const LOGIN_EMAIL_URL: string = '/user/login'
 })
 export class BaseHttpService {
 
+  apiUrl = LOGIN_EMAIL_URL;
+
   constructor(
-    http: HttpClient
+    protected http: HttpClient,
+    //@Inject(LOCALE_ID) public locale: string
   ) { }
+
+  protected postRequest<T>(url: string, formGroup: FormGroup) {
+    return this.http.post<T>(this.apiUrl + url, formGroup.value);
+  }
+
 
 }

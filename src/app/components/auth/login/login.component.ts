@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Inject, Output, PLATFORM_ID } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { takeUntil } from 'rxjs/operators';
 import { LoginEmailService } from 'src/app/services/auth/login/login-email.service';
 
 import { UserInfo } from 'src/app/services/auth/login/login.models';
@@ -13,7 +14,7 @@ import { BasePageComponent } from '../../base-page/base-page.component';
 })
 export class LoginComponent extends BasePageComponent {
   formSubmited: boolean = false;
-  loginResponce: UserInfo;
+  loginResponse: UserInfo;
 
   loginForm = this.formBuilder.group({
     login: ['', [Validators.required]],
@@ -29,7 +30,8 @@ export class LoginComponent extends BasePageComponent {
   constructor(
     private formBuilder: FormBuilder,
     private dialog: MatDialog,
-    private loginService: LoginEmailService) {
+    private loginService: LoginEmailService
+    ) {
     super()
   }
 
@@ -44,10 +46,16 @@ export class LoginComponent extends BasePageComponent {
   onSubmit(loginForm) {
     if (this.formSubmited) return;
     this.formSubmited = true;
-    console.log(loginForm);
-    console.log(this.formSubmited)
-    
+    this.loginService.requestLoginUser(loginForm).pipe(takeUntil(this.unsubscribe)).subscribe((resp) => {
+      console.log('login status', resp)
+      this.loginResponse = resp;
+      this.loginSuccessfull();
+    })
 
+  }
+
+  loginSuccessfull() {
+    this.closeDialog('../');
   }
 
   signup() {
