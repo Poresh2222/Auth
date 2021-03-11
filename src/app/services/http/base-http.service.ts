@@ -18,6 +18,7 @@ export class BaseHttpService {
   constructor(
     protected http: HttpClient,
     //@Inject(LOCALE_ID) public locale: string
+    //
   ) { }
 
   protected postRequest<T>(url: string, formGroup: FormGroup) {
